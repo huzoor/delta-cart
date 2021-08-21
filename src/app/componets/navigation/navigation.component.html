@@ -1,0 +1,26 @@
+<div>
+    <mat-card>
+  
+        <button mat-button [matMenuTriggerFor]="languages">Products Categories</button>
+            <mat-menu #languages="matMenu">
+              <button mat-menu-item [matMenuTriggerFor]="sofa">Sofa & Chairs</button>
+              <button mat-menu-item [matMenuTriggerFor]="dining">Dinning Room</button>
+            </mat-menu>
+        
+            <mat-menu #sofa="matMenu">      
+              <button mat-menu-item>Sofa</button>
+              <button mat-menu-item>Arm Chair</button>
+              <button mat-menu-item>Desk Chair</button>
+              <button mat-menu-item>Dining Table</button>
+            </mat-menu>
+        
+            <mat-menu #dining="matMenu">      
+                <button mat-menu-item>Dining Chairs</button>
+                <button mat-menu-item>Hoodies</button>
+            </mat-menu>
+        
+        
+   
+        </mat-card>
+        
+</div>
