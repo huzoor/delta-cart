@@ -1,0 +1,30 @@
+
+
+  .products-list {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+  .item {
+    width: 300px;
+    border: 1px solid black;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+  }
+  .container::before, .container::after {
+    content: '';
+    width: 100%;
+    order: 1;
+  }
+  .item:nth-child(n + 4) {
+    order: 1;
+  }
+  .item:nth-child(n + 7) {
+    order: 2;
+  }
+  .product-img{
+      width: 200px;
+      height: 250px;
+  }

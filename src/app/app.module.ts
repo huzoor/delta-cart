@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule, ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +11,7 @@ import { ProductsComponent } from './componets/products/products.component';
 import { NavigationComponent } from './componets/navigation/navigation.component';
 import { ProductsListingComponent } from './componets/products-listing/products-listing.component';
 import { HeaderNavComponent } from './componets/header-nav/header-nav.component';
-import { DashboardComponent } from './componets/dashboard/dashboard.component';
+import { CartSummaryComponent } from './componets/cart-summary/cart-summary.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +20,15 @@ import { DashboardComponent } from './componets/dashboard/dashboard.component';
     NavigationComponent,
     ProductsListingComponent,
     HeaderNavComponent,
-    DashboardComponent
+    CartSummaryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     AngularMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastNoAnimationModule.forRoot(), 
   ],
   providers: [],
   bootstrap: [AppComponent]

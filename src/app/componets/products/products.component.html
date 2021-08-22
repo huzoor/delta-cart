@@ -1,9 +1,19 @@
-<div>
-    asdf
-    <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile>1</mat-grid-tile>
-        <mat-grid-tile>2</mat-grid-tile>
-        <mat-grid-tile>3</mat-grid-tile>
-        <mat-grid-tile>4</mat-grid-tile>
-      </mat-grid-list>
+<div class="products-list">
+    <mat-card class="example-card item" *ngFor="let product of productsList">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{product?.title}}</mat-card-title>
+        </mat-card-header>
+        <img class="product-img" mat-card-image [src]="product.image">
+        <mat-card-content>
+          <p>
+           {{product?.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-stroked-button color="primary" (click)="addItemToCart(product)">Add to Cart</button>
+        </mat-card-actions>
+      </mat-card>
+      
+
 </div>

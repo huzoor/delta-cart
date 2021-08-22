@@ -1,0 +1,12 @@
+@import '~ngx-toastr/toastr';
+
+.cart-section{
+    width: 85%;
+}
+.cart-text{
+    float: right;
+}
+.cart-img{
+    height: 26px;
+    vertical-align: middle;
+}
