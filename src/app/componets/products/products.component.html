@@ -1,19 +1,20 @@
-<div class="products-list">
+<div>
+  <app-navigation></app-navigation>
+  <div class="products-list">
     <mat-card class="example-card item" *ngFor="let product of productsList">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{product?.title}}</mat-card-title>
-        </mat-card-header>
-        <img class="product-img" mat-card-image [src]="product.image">
-        <mat-card-content>
-          <p>
-           {{product?.description}}
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-stroked-button color="primary" (click)="addItemToCart(product)">Add to Cart</button>
-        </mat-card-actions>
-      </mat-card>
-      
-
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{product?.title}}</mat-card-title>
+      </mat-card-header>
+      <img class="product-img" mat-card-image [src]="product.image">
+      <mat-card-content>
+        <p>
+          {{product?.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-stroked-button color="primary" (click)="addItemToCart(product)">Add to Cart</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>

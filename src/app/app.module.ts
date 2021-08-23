@@ -12,6 +12,7 @@ import { NavigationComponent } from './componets/navigation/navigation.component
 import { ProductsListingComponent } from './componets/products-listing/products-listing.component';
 import { HeaderNavComponent } from './componets/header-nav/header-nav.component';
 import { CartSummaryComponent } from './componets/cart-summary/cart-summary.component';
+import { CheckoutComponent } from './componets/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CartSummaryComponent } from './componets/cart-summary/cart-summary.comp
     NavigationComponent,
     ProductsListingComponent,
     HeaderNavComponent,
-    CartSummaryComponent
+    CartSummaryComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

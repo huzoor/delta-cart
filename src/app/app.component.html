@@ -4,17 +4,10 @@
   </mat-grid-tile>
   <mat-grid-tile colspan="3" rowspan="1">
     <div class="cart-section">
-      <div class="cart-text" [routerLink]="['cart-summary']">Cart <span>({{cartItems.length}})</span>
+      <div class="cart-text" (click)="openCartDialog()">Cart <span>({{cartItems.length}})</span>
         <span> <img class="cart-img" src="assets/images/cart2.png" /></span>
       </div>
     </div>
   </mat-grid-tile>
-
-  <mat-grid-tile colspan="1" rowspan="1">
-    <app-navigation></app-navigation>
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="3" rowspan="1"></mat-grid-tile>
-
 </mat-grid-list>
 <router-outlet></router-outlet>

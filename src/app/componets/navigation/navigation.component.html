@@ -1,10 +1,8 @@
 <div>
     <mat-card>
-
         <button mat-button [matMenuTriggerFor]="languages">Products Categories</button>
         <mat-menu #languages="matMenu">
             <button mat-menu-item *ngFor="let cat of categoryList" (click)="getProductsByCategory(cat)">{{cat}}</button>
         </mat-menu>
     </mat-card>
-
 </div>

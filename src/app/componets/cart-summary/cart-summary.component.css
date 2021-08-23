@@ -1,0 +1,31 @@
+
+table.mat-table{
+    width: 100%;
+}
+.mat-column-title {
+    white-space: unset;
+    flex: 0 0 28%;
+    width: 28%;
+    padding: 0 10px;
+    word-wrap: break-word;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+.mat-column-category {
+    white-space: unset;
+    flex: 0 0 18%;
+    width: 18%;
+    word-wrap: break-word;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+.mat-column-image {
+    text-align: center;
+}
+.tab-img{
+    height: 100px;
+}

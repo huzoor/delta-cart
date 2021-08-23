@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
 import { ProductsService } from 'src/app/services/products.service';
 import { SharedService } from 'src/app/services/shared.service';
 
@@ -14,9 +13,6 @@ export class NavigationComponent implements OnInit {
   constructor(private productService:ProductsService, private sharedService: SharedService) { }
 
   ngOnInit(): void {
-  
-
-
     this.productService.getCategories().subscribe(categories => {
       this.categoryList = categories;
     });
