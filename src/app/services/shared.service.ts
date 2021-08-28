@@ -8,6 +8,9 @@ export class SharedService {
   private cartItem = new BehaviorSubject<any>({});
   sharedCartItem = this.cartItem.asObservable();
  
+  private removedCartItem = new BehaviorSubject<any>('');
+  sharedRemovedCartItem = this.removedCartItem.asObservable();
+ 
   private finalCartItems = new BehaviorSubject<any>([]);
   sharedFinalCartItems = this.cartItem.asObservable();
  
@@ -20,6 +23,10 @@ export class SharedService {
     this.cartItem.next(product)
   }
  
+  removeCartItem(product: any) {
+    this.removedCartItem.next(product)
+  }
+
   setSelectedCategory(category: any) {
     this.selectedCategory.next(category)
   }

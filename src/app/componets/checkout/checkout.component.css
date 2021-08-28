@@ -1,0 +1,12 @@
+.example-form {
+    padding: 0 5%;
+} 
+.example-full-width {
+    width: 98%;
+}
+.flex-content{
+    display: flex;
+}
+.flex-item{
+    width: 100%;
+}

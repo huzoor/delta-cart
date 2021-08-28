@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { SharedService } from 'src/app/services/shared.service';
 import { Router } from '@angular/router';
 
@@ -8,8 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-  data: any = {};
+  data!: any;
   routeState: any;
+  addShopFormGroup!: FormGroup;
   constructor(private sharedService:SharedService, private router: Router) { }
 
   ngOnInit(): void {
@@ -19,6 +21,20 @@ export class CheckoutComponent implements OnInit {
         console.log('this.routeState',this.routeState)
       }
     }
+
+    this.addShopFormGroup = new FormGroup({
+      firstName : new FormControl('', [Validators.required]),
+      LastName : new FormControl('', [Validators.required]),
+      shopAddress : new FormControl('', [Validators.required])
+    });
+
   }
 
+  checkError (controlName: string, errorName: string){
+    return this.addShopFormGroup.controls[controlName].hasError(errorName);
+  }
+
+  onSubmit(){
+    console.log('addShopFormGroup',this.addShopFormGroup)
+  }
 }

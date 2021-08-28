@@ -5,6 +5,7 @@
 }
 .cart-text{
     float: right;
+    cursor: pointer;
 }
 .cart-img{
     height: 26px;

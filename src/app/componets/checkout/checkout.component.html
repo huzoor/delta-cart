@@ -1,1 +1,30 @@
-<p>checkout works!</p>
+<div class="example-container">
+    <form [formGroup]="addShopFormGroup" (ngSubmit)="onSubmit()" class="example-form">
+        <div class="flex-content">
+            <div class="flex-item">
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName">
+                    <mat-error *ngIf="checkError('firstName', 'required')">First Name is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="flex-item">
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="LastName">
+                    <mat-error *ngIf="checkError('LastName', 'required')">Last Name is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <div>
+                <mat-form-field appearance="outline" class="example-full-width">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput formControlName="shopAddress"></textarea>
+                    <mat-error *ngIf="checkError('shopAddress', 'required')">Address is required</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!addShopFormGroup.valid">Submit</button>
+    </form>
+</div>

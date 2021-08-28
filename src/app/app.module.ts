@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { ToastrModule, ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +32,7 @@ import { CheckoutComponent } from './componets/checkout/checkout.component';
     AngularMaterialModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule ,
     ToastNoAnimationModule.forRoot(), 
   ],
   providers: [],

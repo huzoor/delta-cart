@@ -27,6 +27,13 @@ export class AppComponent {
 
       console.log('this.cartItems', this.cartItems)
     });
+    
+    this.sharedService.sharedRemovedCartItem.subscribe(productId => {
+      if (productId) 
+        this.cartItems = this.cartItems.filter((item: any) => item.id !== productId)
+
+      console.log('this.cartItems after remove', this.cartItems)
+    });
   }
 
   openCartDialog() {
@@ -39,7 +46,7 @@ export class AppComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed', result);
-      if(result && result.type && result.type === 'checkout'){
+      if(result && result.type && result.type === 'checkout' && result.cartData && result.cartData && result.cartData.cartItems.length){
         this.sharedService.setFinalCartItems(result.cartData);
         this.router.navigate(['/checkout'], {
           state: {

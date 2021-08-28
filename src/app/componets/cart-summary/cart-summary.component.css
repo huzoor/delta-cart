@@ -29,3 +29,7 @@ table.mat-table{
 .tab-img{
     height: 100px;
 }
+.remove-text{
+    cursor: pointer;
+    color: chocolate;
+}
