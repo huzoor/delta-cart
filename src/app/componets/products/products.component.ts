@@ -24,6 +24,12 @@ export class ProductsComponent implements OnInit  {
         })
       }
     });
+
+    this.sharedService.sharedSearchTerm.subscribe(term => {
+      if(term){
+        this.onItemSearch(term)
+      }
+    })
     
     this.productService.getProducts().subscribe(products => {
       this.productsList = products;
@@ -35,9 +41,9 @@ export class ProductsComponent implements OnInit  {
     this.sharedService.setCartItem(product)
   }
 
-  onItemSearch(){
-    this.productsList = this.productsList.filter((item:any) => ((item.description.toLowerCase().indexOf(this.searchText) > -1) || (item.title.toLowerCase().indexOf(this.searchText) > -1) || (item.category.toLowerCase().indexOf(this.searchText) > -1) ))
-    console.log('searchText', this.searchText, this.productsList);
+  onItemSearch(term){
+    this.productsList = this.productsList.filter((item:any) => ((item.description.toLowerCase().indexOf(term) > -1) || (item.title.toLowerCase().indexOf(term) > -1) || (item.category.toLowerCase().indexOf(term) > -1) ))
+    console.log('searchText', term, this.productsList);
   }
 
   onClearSelection(){

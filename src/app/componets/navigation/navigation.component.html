@@ -1,8 +1,113 @@
-<div>
+<!-- <div>
     <mat-card>
         <button mat-button [matMenuTriggerFor]="languages">Products Categories</button>
         <mat-menu #languages="matMenu">
             <button mat-menu-item *ngFor="let cat of categoryList" (click)="getProductsByCategory(cat)">{{cat}}</button>
         </mat-menu>
     </mat-card>
+</div> -->
+
+<header id="header">
+    <nav class="header-nav">
+        <div class="container">
+            <div class="box-tags">
+                <p>Welcome to Pataku Online Shopping Store !</p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="header_logo col-left col col-lg-3 col-md-12 col-xs-12">
+                    <a [routerLink]="" queryParamsHandling="preserve">
+                        <img class="logo img-responsive" src="assets/images/pataku_logo.jpg" alt="Pataku">
+                    </a>
+                </div>
+                <div class="col-right col col-xs-12 col-lg-9 col-md-12">
+                    <div class="seach-cart">
+
+                        <div class="wishtlist_Top">
+                            <a class="wishtlist_top" [routerLink]="" queryParamsHandling="preserve">
+                                <i class="lnr lnr-heart"></i>
+                                <div class="groud-wlist">
+                                    <span class="cart-wishlist-number">{{cartItems.length}}</span>
+                                    <span class="text">My Cart</span>
+                                </div>
+                            </a>
+                        </div><!-- Block search module TOP -->
+                        <div id="search_widget" class="search_top">
+                            <input type="text" [(ngModel)]="searchText" (keyup.enter)="onItemSearch()"
+                                placeholder="Search entire store here ..." aria-label="Search">
+                            <button type="submit">
+                                <span class="ion-ios-search search">search</span>
+                                <span class="hidden-xl-down">Search</span>
+                            </button>
+                        </div>
+                        <!-- /Block search module TOP -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="container">
+            <div class="nav-container ">
+                <div class="nav-inner">
+                    <div id="pt_custommenu" class="pt_custommenu">
+                        <div id="pt_menu_home" class="pt_menu ">
+                            <div class="parentMenu"><a class="fontcustom2" [routerLink]=""
+                                    queryParamsHandling="preserve"><span>Home</span></a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Slider -->
+
+<div class=" pos_bannerslide">
+    <div class="container">
+        <div class="group_bannerslide">
+            <div class="row">
+                <div class="boxiner1 col-xs-12 col-md-12 col-lg-3">
+                    <div class="navleft-container hidden-md-down ">
+                        <div class="pt_vegamenu">
+                            <div class="pt_vmegamenu_title">
+                                <h2><i class="ion-navicon"></i>Browse categories</h2>
+                            </div>
+                            <div id="pt_vmegamenu" class="pt_vmegamenu pt_vegamenu_cate">
+                                <div id="ver_pt_menu12" class="pt_menu noSub" *ngFor="let cat of categoryList">
+                                    <div class="parentMenu"> <a [routerLink]="" queryParamsHandling="preserve"
+                                            (click)="getProductsByCategory(cat)"><span>{{cat}}</span></a></div>
+                                </div>
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxiner2 col-xs-12 col-md-12 col-lg-6">
+                    <div class="slideshow_container">
+                        <div class="pos-slideshow">
+                            <div class="flexslider ma-nivoslider">
+                                <div class="pos-loading" style="display: none;"></div>
+                                <div id="pos-slideshow-home" class="slides nivoSlider">
+                                    <img class="nivo-main-image"
+                                        src="http://demo.posthemes.com/pos_pataku/layout2/modules/posslideshows/images/89ad3f14562ed1e03cef3b99102c12845073909a_banner1_home2.jpg"
+                                        style="display: inline; height: 438px;">
+                                   
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>

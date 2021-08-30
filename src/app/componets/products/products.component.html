@@ -1,13 +1,13 @@
 <div>
-  <mat-form-field class="example-form-field full-width" appearance="fill">
+  <!-- <mat-form-field class="example-form-field full-width" appearance="fill">
     <mat-label>Clearable input</mat-label>
     <input matInput type="text" [(ngModel)]="searchText" (keyup.enter)="onItemSearch()">
     <button *ngIf="searchText" matSuffix mat-icon-button aria-label="Clear" (click)="onClearSelection()">
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
-  <app-navigation></app-navigation>
-  <div class="products-list">
+   -->
+  <!-- <div class="products-list">
     <mat-card class="example-card item" *ngFor="let product of productsList">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
@@ -23,5 +23,73 @@
         <button mat-stroked-button color="primary" (click)="addItemToCart(product)">Add to Cart</button>
       </mat-card-actions>
     </mat-card>
-  </div>
+  </div> -->
 </div>
+<section id="wrapper">
+  <div class="tab-category-container-slider" data-items="3" data-speed="1000" data-autoplay="0" data-time="3000"
+    data-arrow="1" data-pagination="0" data-move="1" data-pausehover="0" data-md="3" data-sm="3" data-xs="2"
+    data-xxs="1">
+    <div class="container">
+      <div class="tab-category">
+
+        <div class="pos_title">
+          <h2>Products <span>List</span></h2>
+
+        </div>
+        <div class="js-product-list">
+          <div class="products row product_content grid">
+            <div class="item-product col-xs-12 col-sm-6 col-md-6 col-lg-4" *ngFor="let product of productsList">
+              <article class="product-miniature js-product-miniature">
+                <div class="img_block">
+
+                  <a href="#" class="thumbnail product-thumbnail">
+                    <img class="product-img" [src]="product.image" alt="Field Messenger" />
+                  </a>
+
+                  <ul class="product-flag">
+                    <li class=" new">New</li>
+                  </ul>
+                  <ul class="add-to-links">
+
+                    <li class="cart">
+                      <div class="product-add-to-cart">
+                        <button tool-tip="a" class="button tooltip"
+                          data-button-action="add-to-cart"  (click)="addItemToCart(product)"  >
+                          <span class="tooltiptext">Add to Cart</span>
+                          Add to cart
+                        </button> 
+                      </div>
+
+                    </li>
+                  </ul>
+
+                </div>
+                <div class="product_desc">
+
+                  <h1 itemprop="name">
+                    <a href="#" class="product_name">{{product?.title}}</a>
+                  </h1>
+
+                  <div class="product-price-and-shipping">
+
+                    <span class="sr-only">Price</span>
+                    <span itemprop="price" class="price ">$45.50</span>
+
+                  </div>
+
+                  <div class="product-desc" itemprop="description">
+                    <p><span
+                        style="font-size:10pt;font-family:Arial;font-weight:normal;font-style:normal;color:#000000;">
+                        {{product?.description}}</span></p>
+                  </div>
+
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

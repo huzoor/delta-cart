@@ -14,6 +14,7 @@ import { ProductsListingComponent } from './componets/products-listing/products-
 import { HeaderNavComponent } from './componets/header-nav/header-nav.component';
 import { CartSummaryComponent } from './componets/cart-summary/cart-summary.component';
 import { CheckoutComponent } from './componets/checkout/checkout.component';
+import { FooterComponent } from './componets/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CheckoutComponent } from './componets/checkout/checkout.component';
     ProductsListingComponent,
     HeaderNavComponent,
     CartSummaryComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

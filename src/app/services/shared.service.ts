@@ -17,6 +17,9 @@ export class SharedService {
   private selectedCategory = new BehaviorSubject('');
   sharedSelectedCategory = this.selectedCategory.asObservable();
 
+  private searchTerm = new BehaviorSubject('');
+  sharedSearchTerm = this.selectedCategory.asObservable();
+
   constructor() { }
 
   setCartItem(product: any) {
@@ -33,5 +36,9 @@ export class SharedService {
 
   setFinalCartItems(cartItems:any){
     this.finalCartItems.next(cartItems)
+  }
+  
+  setSearchTerm(term:any){
+    this.searchTerm.next(term)
   }
 }
